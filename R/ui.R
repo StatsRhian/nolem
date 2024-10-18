@@ -4,24 +4,22 @@
 #' @noRd
 app_ui = function(request) {
 
-shiny::fluidPage(
-    shiny::titlePanel("Old Faithful Geyser Data"),
+bslib::page_sidebar(
+    title = "Old Faithful Geyser Data",
     lang = "en",
-    add_external_resources(),
-    # Sidebar with a slider input for number of bins
-    shiny::sidebarLayout(
-      shiny::sidebarPanel(
-        shiny::sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
+    theme = bslib::bs_theme(primary = "#005EB8", base_font = "Frutiger"),
+    sidebar = bslib::sidebar(
+      shiny::sliderInput("bins",
+                         "Number of bins:",
+                         min = 1,
+                         max = 50,
+                         value = 30)
+    ),
 
-        # Show a plot of the generated distribution
-      shiny::mainPanel(
+      bslib::card(
+        bslib::card_header("A nice plot"),
         shiny::plotOutput("distPlot")
         )
     )
-)
+
 }

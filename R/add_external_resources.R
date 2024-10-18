@@ -8,8 +8,7 @@ add_external_resources = function() {
   )
   shiny::singleton(
     shiny::tags$head(
-      fontawesome::fa_html_dependency(),
-      shinyjs::useShinyjs()
+
     )
   )
 }
