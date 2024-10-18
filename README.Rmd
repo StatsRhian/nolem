@@ -19,11 +19,11 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 The goal of nolem is to provide an example of how to package up a Shiny application.
-
 The main aims are:
 
-- package up a shiny application (without additional packages)
-- Use {bslib}
+- DIY shiny-as-a-package (without additional packages)
+- Use [{bslib}](https://rstudio.github.io/bslib/)
+- Styled in NHS branding
 - Meets accessibility standards
 
 
@@ -31,20 +31,24 @@ The main aims are:
 
 There are a number of packages which provide scaffolding for shiny-as-a-package
 
-- {golem}
-- {rhino}
-- {leprechaun}
+- [{golem}](https://thinkr-open.github.io/golem/)
+- [{rhino}](https://appsilon.github.io/rhino/)
+- [{leprechaun}](https://leprechaun.opifex.org/#/)
 
-Personally, I find them a little bit excessive for projects, and I like having something independent.
+Personally, I find them a little bit excessive for small projects, and I like having something independent.
 
 
 ## Getting started
 
-This is an example framework, to help people learn about shiny as a package. 
-I like shiny-as-a-package because you get the benefits of the R CMD check, and because people can run your app easily
+This is an example framework showing a DIY shiny-as-a-package. 
+I like shiny-as-a-package because you get the benefits of the R CMD check, and because people can run your app easily.
+
+The package isn't really intended to be installed, as it's a demo. 
+
+If you want to run the app, you can with the following
 
 ```{r, eval = FALSE}
-install.packages("nolem")
+devtools::install_github("statsRhian/nolem")
 nolem::run_app()
 ```
 
