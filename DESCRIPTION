@@ -12,3 +12,5 @@ RoxygenNote: 7.3.2
 Imports: 
     bslib,
     shiny
+URL: https://github.com/StatsRhian/nolem
+BugReports: https://github.com/StatsRhian/nolem/issues
